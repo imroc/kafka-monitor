@@ -1,0 +1,9 @@
+version: "3"
+services:
+  kafka-monitor:
+    image: imroc/kafka-monitor
+    container_name: kafka-monitor
+    command: --zk 10.10.10.149:2181 --port 8080 --refresh 10.seconds --retain 2.days
+    ports:
+      - 8080:8080
+
