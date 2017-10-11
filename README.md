@@ -5,7 +5,11 @@ docker image for [KafkaOffsetMonitor](https://github.com/quantifind/KafkaOffsetM
 Usage
 ======
 ``` sh
-docker run -d imroc/kafka-monitor --zk 192.168.1.2:2181 --port 8080 --refresh 10.seconds --retain 2.days
+docker run -d --rm -p 8080:8080 imroc/kafka-monitor \
+  --zk 192.168.1.2:2181 \
+  --port 8080 \
+  --refresh 10.seconds \
+  --retain 2.days
 ```
 
 ## docker-compose
